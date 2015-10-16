@@ -78,8 +78,8 @@ def create(cur):
         cur.execute('''
             CREATE TABLE users (
                 login VARCHAR(8),
-                uid INT,
-                prid INT)
+                uid INTEGER,
+                prid INTEGER)
             ''')
     except DB_EXC.OperationalError, e:
         drop(cur)
